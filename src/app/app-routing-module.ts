@@ -5,7 +5,8 @@ import { Inicio } from './inicio/inicio';
 const routes: Routes = [
   {path:'inicio',component:Inicio},
   {path:'usuarios',loadChildren: () => import('./usuarios/usuarios-module').then(m => m.UsuariosModule)},
-  {path:'productos',loadChildren: () => import('./productos/productos-module').then(m => m.ProductosModule)}
+  {path:'productos',loadChildren: () => import('./productos/productos-module').then(m => m.ProductosModule)},
+  {path:'**',component:Inicio}
 ];
 
 @NgModule({
