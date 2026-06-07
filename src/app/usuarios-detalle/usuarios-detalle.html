@@ -1,0 +1,39 @@
+<div class="detalle-container">
+    <div class="detalle-card">
+        <div class="detalle-header">
+            <div class="avatar-grande">
+                👤
+            </div>
+
+            <div>
+                <h1>{{usuario.nombre}}</h1>
+                <p>ID #{{usuario.id}}</p>
+            </div>
+        </div>
+
+        <div class="detalle-body">
+            <div class="info-item">
+                <span class="label">Correo Electrónico</span>
+                <span class="valor">
+                    {{usuario.correo}}
+                </span>
+            </div>
+
+            <div class="info-item">
+                <span class="label">Rol</span>
+                <span class="badge-rol">
+                    {{usuario.rol}}
+                </span>
+            </div>
+
+            <div class="info-item">
+                <span class="label">Estado</span>
+                <span class="estado" [class.activo]="usuario.estado" [class.inactivo]="!usuario.estado">
+                    {{usuario.estado ? 'Activo' : 'Inactivo'}}
+                </span>
+            </div>
+        </div>
+
+        <div class="detalle-footer"><button class="btn-volver" routerLink="/usuarios">+ Volver al listado</button></div>
+    </div>
+</div>

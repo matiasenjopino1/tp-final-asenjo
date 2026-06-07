@@ -1,0 +1,81 @@
+
+.layout{
+    display: flex;
+    min-height: 100vh;
+    background-color: #2e87aa;
+}
+.siderbar{
+    width: 250px;
+    height: 100vh;
+    background:linear-gradient(
+        180deg,
+        #141e30,
+        #243b55
+    );
+    position:fixed;
+    left:0;
+    top:0;
+    padding: 30px 20px;
+    box-shadow: 5px 0 20px rgba(0,0,0,3);
+}
+
+.logo{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.logo h2{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 250px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all .3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+nav a:hover{
+    background:#00c6ff;
+    color:#fff;
+    transform:translateX(8px);
+
+    box-shadow:
+        0 0 10px #00c6ff,
+        0 0 20px #00c6ff,
+        0 0 40px #00c6ff;
+}
+
+nav a.active{
+    background:#00c6ff;
+    box-shadow:
+        0 0 10px #00c6ff,
+        0 0 20px #00c6ff,
+        0 0 40px #00c6ff;
+}
+
+nav a span{
+    font-size:1.2rem;
+}
+
+.content{
+    width: 100%;
+    padding:20px;
+}

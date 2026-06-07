@@ -1,0 +1,49 @@
+.main-content{
+    height: 100%;
+}
+
+.titulo-principal{
+    padding-top: 100px;
+    font-size: xx-large;
+    text-align: center;
+}
+.secciones-content{
+        display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+}
+.usuario-container,
+.productos-container{
+    background: white;
+    width: 320px;
+    min-height: 220px;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.usuario-container:hover,
+.productos-container:hover{
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.15),
+        0 0 15px rgba(0,198,255,0.3);
+}
+
+.usuario-container h3,
+.productos-container h3{
+    color: #243b55;
+    font-size: 1.4rem;
+    text-align: center;
+}

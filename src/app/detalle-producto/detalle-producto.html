@@ -1,0 +1,39 @@
+<div class="detalle-container">
+    <div class="detalle-card">
+        <div class="detalle-header">
+            <h1>{{producto.titulo}}</h1>
+            @if(producto.titulo){
+            <span class="badge-descuento">
+                {{producto.descuento}}% OFF
+            </span>
+            }
+        </div>
+        <div class="detalle-info">
+
+            <div class="info-item">
+                <span class="label">Precio</span>
+                <span class="valor precio">
+                    ${{ producto.precio }}
+                </span>
+            </div>
+
+            <div class="detalle-item">
+                <span class="label">Descripcion</span>
+                <span class="valor">
+                    {{producto.descripcion}}
+                </span>
+            </div>
+
+            <div class="info-item">
+                <span class="label">Id Producto</span>
+                <span class="valor">#{{producto.id}}</span>
+            </div>
+
+        </div>
+        <div class="acciones">
+            <button class="btn-volver" routerLink="/productos">
+                + Volver al listado
+            </button>
+        </div>
+    </div>
+</div>

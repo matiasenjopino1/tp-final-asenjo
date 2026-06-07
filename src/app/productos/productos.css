@@ -1,0 +1,113 @@
+.tabla-container{
+    margin: 30px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.tabla-container h2{
+    margin-bottom: 25px;
+    color: #243b55;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+thead{
+    background: linear-gradient(
+        90deg,
+        #243b55,
+        #141e30
+    );
+    color: white;
+}
+
+th{
+    padding: 18px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+td{
+    padding: 18px;
+    border-bottom: 1px solid #ececec;
+}
+
+tbody tr{
+    transition: .3s;
+}
+
+tbody tr:hover{
+    background: #f8fcff;
+    transform: scale(1.005);
+}
+
+.precio{
+    font-weight: bold;
+    color: #00e85f
+}
+
+
+.acciones{
+    display: flex;
+    gap: 10px;
+}
+
+.btn-detalle{
+    border: none;
+    background: #00c6ff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-detalle:hover{
+    box-shadow:
+        0 0 10px #00c6ff,
+        0 0 20px #00c6ff;
+}
+
+.btn-eliminar{
+    border: none;
+    background: #ff5f5f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-eliminar:hover{
+    box-shadow:
+        0 0 10px #ff5f5f,
+        0 0 20px #ff5f5f;
+}
+
+.header-tabla{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.btn-crear{
+    border:none;
+    background:#27ae60;
+    color:white;
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-crear:hover{
+    box-shadow:
+        0 0 10px #27ae60,
+        0 0 20px #27ae60;
+}

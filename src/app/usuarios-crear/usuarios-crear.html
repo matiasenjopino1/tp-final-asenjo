@@ -1,0 +1,59 @@
+<div class="form-container">
+    <div class="form-card">
+        <h2>Crear Usario</h2>
+
+
+        <form [formGroup]="usuarioForm" (ngSubmit)="guardarUsuario()">
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" formControlName="nombre">
+                @if(usuarioForm.get('nombre')?.invalid && usuarioForm.get('nombre')?.touched){
+                <small class="error">
+                    Ingrese un nombre valido
+                </small>
+                }
+            </div>
+
+            <div class="form-group">
+                <label>Correo Electrónico</label>
+                <input type="email" formControlName="correo">
+                @if(usuarioForm.get('correo')?.hasError('required') && usuarioForm.get('correo')?.touched){
+                <small class="error">
+                    El correo es obligatorio
+                </small>
+                }
+                @if(usuarioForm.get('correo')?.hasError('email') && usuarioForm.get('correo')?.touched){
+                <small class="error">
+                    Correo inválido
+                </small>
+                }
+            </div>
+            <div class="form-group">
+                <label>Rol</label>
+                <select formControlName="rol">
+                    <option value="">
+                        Seleccione un rol
+                    </option>
+                    <option value="Administrador">
+                        Administrador
+                    </option>
+                    <option value="Supervisor">
+                        Supervisor
+                    </option>
+                    <option value="Usuario">
+                        Usuario
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Estado</label>
+                <select formControlName="estado">
+                    <option [ngValue]="true">Activo</option>
+                    <option [ngValue]="false">Inactivo</option>
+                </select>
+            </div>
+
+            <button type="submit" [disabled]="usuarioForm.invalid">Crear Usuarios</button>
+        </form>
+    </div>
+</div>
